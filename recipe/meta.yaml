@@ -1,5 +1,5 @@
 {% set name = "primod" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/primod-{{ version }}.tar.gz
-  sha256: c600d6b45d4c40c08003ff1f3a156bd1d0d6bb40c206a297e05dac92dcca7976
+  sha256: 34fbd12333c7555e133365dd779850071f7c197949fe759484d72a7a0a2fdbfb
 
 build:
   noarch: python
