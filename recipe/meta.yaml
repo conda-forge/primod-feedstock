@@ -28,6 +28,7 @@ requirements:
     - ribasim
     - tomli-w
     - xarray
+    - scipy
 
 test:
   imports:
