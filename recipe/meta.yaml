@@ -25,6 +25,7 @@ requirements:
     - imod
     - numpy
     - pandas
+    - pydantic
     - ribasim
     - tomli-w
     - xarray
