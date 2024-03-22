@@ -1,5 +1,5 @@
 {% set name = "primod" %}
-{% set version = "2024.2.1" %}
+{% set version = "2024.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/primod-{{ version }}.tar.gz
-  sha256: 73b0b1118fbfedab1204d30bed518d675b9b4bb90ab7ef35085807f29a40ae88
+  sha256: 46464cf1b976b4cc459a43da315b469db9cbd49771170b76e2e25cfab851c054
 
 build:
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - imod
     - numpy
     - pandas
+    - pydantic
     - ribasim
     - tomli-w
     - xarray
