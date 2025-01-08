@@ -48,6 +48,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - deltares-service-account
     - Hofer-Julian
     - Huite
     - visr
