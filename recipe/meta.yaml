@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "primod" %}
 {% set version = "2024.3.0" %}
 
@@ -6,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/primod-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/primod-{{ version }}.tar.gz
   sha256: 46464cf1b976b4cc459a43da315b469db9cbd49771170b76e2e25cfab851c054
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - geopandas
     - imod
     - numpy
@@ -38,6 +39,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://deltares.github.io/iMOD-Documentation/coupler.html
