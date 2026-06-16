@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "primod" %}
-{% set version = "2024.3.0" %}
+{% set version = "2026.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/primod-{{ version }}.tar.gz
-  sha256: 46464cf1b976b4cc459a43da315b469db9cbd49771170b76e2e25cfab851c054
+  sha256: 2b0ce219b1f4f825ab7129cedae6b080b9ce2046bc33cb60b4de2f03e127a06d
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
