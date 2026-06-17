@@ -23,11 +23,11 @@ requirements:
   run:
     - python >={{ python_min }}
     - geopandas
-    - imod
+    - imod >=1.0
     - numpy
     - pandas
-    - pydantic
-    - ribasim
+    - pydantic >=2.11
+    - ribasim >=2026.1.1
     - tomli-w
     - xarray
     - scipy
